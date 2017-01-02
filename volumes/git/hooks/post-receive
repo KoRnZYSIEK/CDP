@@ -1,0 +1,3 @@
+#!/bin/sh
+echo "Initializing Delivery Pipeline in Jenkins"
+curl -X POST http://jenkins_master:8080/job/Continuous_Delivery_Pipeline/build?delay=0

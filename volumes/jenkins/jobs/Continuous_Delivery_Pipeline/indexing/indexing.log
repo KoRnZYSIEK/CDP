@@ -1,0 +1,30 @@
+Started by user [8mha:AAAAlh+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAzOEgYu/dLi1CL9vNKcHACFIKlWvwAAAA==[0manonymous
+ > git rev-parse --is-inside-work-tree # timeout=10
+Setting origin to ssh://root@git/git/
+ > git config remote.origin.url ssh://root@git/git/ # timeout=10
+Fetching & pruning origin...
+Fetching upstream changes from origin
+ > git --version # timeout=10
+ > git fetch --tags --progress origin +refs/heads/*:refs/remotes/origin/* --prune
+FATAL: Failed to recompute children of Continuous_Delivery_Pipeline
+[8mha:AAAAWB+LCAAAAAAAAP9b85aBtbiIQSmjNKU4P08vOT+vOD8nVc8DzHWtSE4tKMnMz/PLL0ldFVf2c+b/lb5MDAwVRQxSaBqcITRIIQMEMIIUFgAAckCEiWAAAAA=[0mhudson.plugins.git.GitException: Command "git fetch --tags --progress origin +refs/heads/*:refs/remotes/origin/* --prune" returned status code 128:
+stdout: 
+stderr: Host key verification failed.
+fatal: Could not read from remote repository.
+
+Please make sure you have the correct access rights
+and the repository exists.
+
+	at org.jenkinsci.plugins.gitclient.CliGitAPIImpl.launchCommandIn(CliGitAPIImpl.java:1745)
+	at org.jenkinsci.plugins.gitclient.CliGitAPIImpl.launchCommandWithCredentials(CliGitAPIImpl.java:1489)
+	at org.jenkinsci.plugins.gitclient.CliGitAPIImpl.access$300(CliGitAPIImpl.java:64)
+	at org.jenkinsci.plugins.gitclient.CliGitAPIImpl$1.execute(CliGitAPIImpl.java:315)
+	at jenkins.plugins.git.AbstractGitSCMSource.doRetrieve(AbstractGitSCMSource.java:203)
+	at jenkins.plugins.git.AbstractGitSCMSource.retrieve(AbstractGitSCMSource.java:233)
+	at jenkins.scm.api.SCMSource.fetch(SCMSource.java:148)
+	at jenkins.branch.MultiBranchProject.computeChildren(MultiBranchProject.java:294)
+	at com.cloudbees.hudson.plugins.folder.computed.ComputedFolder.updateChildren(ComputedFolder.java:187)
+	at com.cloudbees.hudson.plugins.folder.computed.FolderComputation.run(FolderComputation.java:137)
+	at hudson.model.ResourceController.execute(ResourceController.java:98)
+	at hudson.model.Executor.run(Executor.java:404)
+Finished: FAILURE
