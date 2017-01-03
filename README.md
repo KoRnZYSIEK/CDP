@@ -22,7 +22,7 @@ Wait for the docker containers to start. Check if the following elements are run
 * `sonarqube YOUR_IP:9000`
 * `selenium YOUR_IP:4444`
 
-You can see that jenkins has a multibranch-project named `Continuous Delivery Pipeline` created and the sonarqube has no projects and nexus repositories are empty. 
+You can see that jenkins has a multibranch-project named `Continuous Delivery Pipeline` created, the sonarqube has no projects and nexus repositories are empty. 
 
 One of the ways to start the job is by commiting something to git repository. You can find local repository cloned into ./git/ Edit the selenium tests:
 
