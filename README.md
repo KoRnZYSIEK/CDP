@@ -1,4 +1,5 @@
-# DISCLAIMER: DO NOT RUN ON HOSTS THAT PORTS CAN BE ACCESSIBLE FROM INTERNET. THE DEMO IS NOT SECURE AND CAN BE EASILY HACKED ;)
+# DISCLAIMER: DO NOT RUN ON HOSTS THAT PORTS CAN BE ACCESSIBLE FROM INTERNET. 
+# THE DEMO IS NOT SECURE AND CAN BE EASILY HACKED ;)
 
 To run this demo you will need to have most recent docker-engine and docker-compose versions installed on a Linux machine. Instructions:
 
