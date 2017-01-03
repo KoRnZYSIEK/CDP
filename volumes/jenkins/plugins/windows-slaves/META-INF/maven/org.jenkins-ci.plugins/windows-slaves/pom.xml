@@ -3,10 +3,10 @@
     <parent>
         <groupId>org.jenkins-ci.plugins</groupId>
         <artifactId>plugin</artifactId>
-        <version>1.545</version> <!-- TODO 1.547 when available: the first to not include this in core -->
+        <version>2.12</version>
     </parent>
     <artifactId>windows-slaves</artifactId>
-    <version>1.0</version>
+    <version>1.2</version>
     <packaging>hpi</packaging>
     <name>Windows Slaves Plugin</name>
     <description>Allows you to connect to Windows machines and start slave agents on them.</description>
@@ -21,12 +21,24 @@
         <connection>scm:git:git://github.com/jenkinsci/${project.artifactId}-plugin.git</connection>
         <developerConnection>scm:git:git@github.com:jenkinsci/${project.artifactId}-plugin.git</developerConnection>
         <url>https://github.com/jenkinsci/${project.artifactId}-plugin</url>
-    </scm>
+      <tag>windows-slaves-1.2</tag>
+   </scm>
+   <properties>
+      <jenkins.version>1.580.1</jenkins.version>
+      <java.level>6</java.level>
+   </properties>
+
     <dependencies>
         <dependency>
             <groupId>org.jenkins-ci</groupId>
             <artifactId>windows-remote-command</artifactId>
             <version>1.4</version>
+            <exclusions>
+               <exclusion>
+                  <groupId>org.jvnet</groupId>
+                  <artifactId>tiger-types</artifactId>
+               </exclusion>
+            </exclusions>
         </dependency>
     </dependencies>
     <repositories>
