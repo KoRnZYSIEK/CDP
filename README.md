@@ -37,4 +37,6 @@ To push the changes from ./git/ path run (you need the GIT_SSH wrapper to get th
 
 `GIT_SSH='../git_wrapper.sh' git clone ssh://root@<YOUR IP>:10022/git/`
 
-  The job for master branch  in jenkins will be created and run.
+  The job in jenkins inside `Continuous Delivery Pipeline` for master branch will be created and run.
+  
+  
