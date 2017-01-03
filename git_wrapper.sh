@@ -1,1 +1,1 @@
-ssh -i <PATH_TO_KEY> "$@"
+ssh -i /tmp/CDP/id_rsa "$@"

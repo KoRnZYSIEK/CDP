@@ -127,3 +127,11 @@ ssh git
 ls
 git clone ssh://git/git
 ssh root@git
+ssh git
+cat /etc/ssh/ssh_config 
+ssh git
+cd /etc/ssh/ssh_config 
+cat /etc/ssh/ssh_config 
+ssh root@git
+cd /var/jenkins_home/workspace/us_Delivery_Pipeline_master-NOWQKWZ4CZLLBITETV243MA4J66PAQD3IXEM33YGZE7CJFTO7BCA/selenium/target/test-classes/com/example/tests/SeleniumTest
+ls
