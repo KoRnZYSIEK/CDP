@@ -35,4 +35,6 @@ by changing the IP address to your machine IP in line 29 (leave the port 18080):
 
 To push the changes from ./git/ path run (you need the GIT_SSH wrapper to get the proper ssh key):
 
-`GIT_SSH='../git_wrapper.sh' git clone ssh://root@<YOUR IP>:10022/git/`The job in jenkins inside `Continuous Delivery Pipeline` will be created for master branch and run.
+`GIT_SSH='../git_wrapper.sh' git clone ssh://root@<YOUR IP>:10022/git/`
+
+The job in jenkins inside `Continuous Delivery Pipeline` will be created for master branch and run.
