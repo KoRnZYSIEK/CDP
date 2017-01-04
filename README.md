@@ -1,7 +1,7 @@
 # DISCLAIMER: DO NOT RUN ON HOSTS THAT PORTS CAN BE ACCESSIBLE FROM INTERNET. 
 # THE DEMO IS NOT SECURE AND CAN BE EASILY HACKED ;)
 
-To run this demo you will need to have the most recent docker-engine and docker-compose versions installed on a Linux machine. Instructions:
+To run this demo you will need to have the most recent docker-engine (now - v1.12.5) and docker-compose versions installed on a Linux machine. Instructions:
 
 [Docker-engine]( https://docs.docker.com/engine/installation/)
 
@@ -13,9 +13,7 @@ To check if they are working enter:
 
 `docker-compose -v`
 
-After you have those two, clone the repository and run `start.sh` script.
-
-Wait for the docker containers to start. Check if the following elements are running by entering in browser:
+After you have those two, clone the repository and run `start.sh` script. Wait for the docker containers to start. If you are running script for the first time, there is quite a lot of data to download. If you have a slower connection you may get timeout errrors from docker hub. Just rerun the script if that happens. Check if the following elements are running by entering in browser:
   
 * `jenkins YOUR_IP:8080`
 * `nexus YOUR_IP:8081`
