@@ -6,7 +6,9 @@
 To run this demo you will need a Linux machine with:
 * User UID 1000 and 200 not assigned to an user (they will be used by jenkins and nexus users)
 * Open and free ports: 4444,5555,8081,8080,9000,9092,50000,10022,100023
-* Have the most recent docker-engine (at the moment I write this - v1.12.5) and docker-compose versions installed. Instructions:
+* The most recent docker-engine (at the moment I write this - v1.12.5) and docker-compose versions installed.
+
+Instructions - how to install Docker:
 
 [Docker-engine]( https://docs.docker.com/engine/installation/)
 
