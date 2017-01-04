@@ -3,6 +3,7 @@
 
 To run this demo you will need:
 * User UID 1000 and 200 not used (will be used by jenkins and nexus users)
+* Open and free ports: 4444,5555,8081,8080,9000,9092,50000,10022,100023
 * Have the most recent docker-engine (now - v1.12.5) and docker-compose versions installed on a Linux machine. Instructions:
 
 [Docker-engine]( https://docs.docker.com/engine/installation/)
