@@ -25,6 +25,7 @@ You can see that jenkins has a multibranch-project named `Continuous Delivery Pi
 One of the ways to start the job is by commiting something to git repository. You can find local repository cloned into ./git/ Edit the selenium tests:
 
 `./git/selenium/src/test/java/selenium/FirefoxSeleniumTest.java`
+
 `./git/selenium/src/test/java/selenium/ChromeSeleniumTest.java`
 
 by changing the IP address to your machine IP in line 29 (leave the port 18080):
@@ -33,6 +34,10 @@ by changing the IP address to your machine IP in line 29 (leave the port 18080):
 
 To push the changes from ./git/ path run (you need the GIT_SSH wrapper to get the proper ssh key):
 
-`GIT_SSH='../git_wrapper.sh' git clone ssh://root@<YOUR IP>:10022/git/`
+`git add *`
+
+`git commit`
+
+`GIT_SSH='../git_wrapper.sh' git push
 
 The job in jenkins inside `Continuous Delivery Pipeline` will be created for master branch and run.
