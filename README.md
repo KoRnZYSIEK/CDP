@@ -44,3 +44,6 @@ To push the changes from ./git/ path run:
 
 The job in jenkins inside `Continuous Delivery Pipeline` will be created for master branch and run.
 
+After the (hopefully) successful run you can check the branch detection. Go into the ./git/ path and run:
+
+
