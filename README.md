@@ -1,6 +1,8 @@
 # DISCLAIMER: DO NOT RUN ON HOSTS THAT PORTS CAN BE ACCESSIBLE FROM INTERNET. 
 # THE DEMO IS NOT SECURE AND CAN BE EASILY HACKED ;)
 
+
+# Running the demo
 To run this demo you will need a Linux machine with:
 * User UID 1000 and 200 not assigned to an user (they will be used by jenkins and nexus users)
 * Open and free ports: 4444,5555,8081,8080,9000,9092,50000,10022,100023
@@ -43,8 +45,28 @@ To push the changes from ./git/ path run:
 
 `GIT_SSH='../git_wrapper.sh' git push` (you need the GIT_SSH wrapper to get the proper ssh key to connect to repository)
 
-The job in jenkins inside `Continuous Delivery Pipeline` will be created for master branch and run.
+The job in jenkins inside `Continuous Delivery Pipeline` will be created for the master branch and run.
 
+# Checking the results
+You can check the following adressess:
+
+* `nexus YOUR_IP:8081`
+
+Go to `Repositories -> Releases -> Browse Storage` and you will see the artifacts were uploaded to nexus repository
+
+* `sonarqube YOUR_IP:9000`
+
+You can check that 1 project was analyzed by clicking big 1 above `Projects Analyzed` you can browse it.
+
+* `application YOUR_IP:18080`
+
+You can check that the application is greeting you from spring boot.
+
+* `jenkins YOUR_IP:8080`
+
+Go to the jenkins job and hover over the last box. You can stop the application and save or skip saving the application docker image.
+
+# Branches and JUnit tests
 After the (hopefully) successful run you can check how the branch detection and the tests work. Go into the `./git/` path and create a new branch by running:
 
 `git checkout -b BranchName`
