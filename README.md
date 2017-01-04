@@ -45,6 +45,21 @@ To push the changes from ./git/ path run:
 
 The job in jenkins inside `Continuous Delivery Pipeline` will be created for master branch and run.
 
-After the (hopefully) successful run you can check the branch detection. Go into the ./git/ path and run:
+After the (hopefully) successful run you can check the branch detection and how the tests work. Go into the `./git/` path and run:
 
+`git checkout -b BranchName`
+
+Next edit the file:
+
+`src/main/java/hello/HelloController.java`
+
+Change the "Greetings from spring boot!" text to something else. This will make the junit test pass, as they check the class behaviour, but will fail the selenium tests which check the final output.
+
+Add the file by running following commands from `./git/` path:
+
+`git add src/main/java/hello/HelloController.java`
+`git commit`
+`GIT_SSH='../git_wrapper.sh' git push --set-upstream origin BranchName`
+
+The job in jenkins inside `Continuous Delivery Pipeline` will be created for BranchName branch and run. It should fail during the selenium tests. 
 
