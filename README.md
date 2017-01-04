@@ -38,6 +38,6 @@ To push the changes from ./git/ path run (you need the GIT_SSH wrapper to get th
 
 `git commit`
 
-`GIT_SSH='../git_wrapper.sh' git push
+`GIT_SSH='../git_wrapper.sh' git push`
 
 The job in jenkins inside `Continuous Delivery Pipeline` will be created for master branch and run.
