@@ -1,10 +1,10 @@
 # DISCLAIMER: DO NOT RUN ON HOSTS THAT PORTS CAN BE ACCESSIBLE FROM INTERNET. 
 # THE DEMO IS NOT SECURE AND CAN BE EASILY HACKED ;)
 
-To run this demo you will need:
-* User UID 1000 and 200 not used (will be used by jenkins and nexus users)
+To run this demo you will need a Linux machine with:
+* User UID 1000 and 200 not assigned to an user (they will be used by jenkins and nexus users)
 * Open and free ports: 4444,5555,8081,8080,9000,9092,50000,10022,100023
-* Have the most recent docker-engine (now - v1.12.5) and docker-compose versions installed on a Linux machine. Instructions:
+* Have the most recent docker-engine (at the moment I write this - v1.12.5) and docker-compose versions installed. Instructions:
 
 [Docker-engine]( https://docs.docker.com/engine/installation/)
 
@@ -16,7 +16,7 @@ To check if they are working enter:
 
 `docker-compose -v`
 
-To start the demo clone the repository and run `start.sh` script. Wait for the docker containers to start. If you are running script for the first time, there is quite a lot of data to download. If you have a slower connection you may get timeout errrors from docker hub. Just rerun the script if that happens. Check if the following elements are running by entering in browser:
+To start the demo clone the repository and run `start.sh` script. Wait for the docker containers to start. If you are running script for the first time, there is quite a lot of data to download. If you have a slower connection you may get a timeout error from docker hub. If it is the case, just rerun the script. Check if the following elements are running by entering following adressess in your internet browser:
   
 * `jenkins YOUR_IP:8080`
 * `nexus YOUR_IP:8081`
@@ -45,7 +45,7 @@ To push the changes from ./git/ path run:
 
 The job in jenkins inside `Continuous Delivery Pipeline` will be created for master branch and run.
 
-After the (hopefully) successful run you can check the branch detection and how the tests work. Go into the `./git/` path and run:
+After the (hopefully) successful run you can check how the branch detection and the selenium tests work. Go into the `./git/` path and create a new branch by running:
 
 `git checkout -b BranchName`
 
