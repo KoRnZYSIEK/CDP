@@ -3972,7 +3972,14 @@ exports.testConnectivity = function(siteId, handler) {
 					handler(true);
 				}
 			}
-		});
+		}, { error: function(xhr, textStatus, errorThrown) {
+                 if (xhr.status === 403) {
+                     exports.goTo('/login');
+                 } else {
+                     handler.call({ isError: true, errorMessage: errorThrown });
+                 }
+               }
+             });
 	};
 	testConnectivity();
 };
