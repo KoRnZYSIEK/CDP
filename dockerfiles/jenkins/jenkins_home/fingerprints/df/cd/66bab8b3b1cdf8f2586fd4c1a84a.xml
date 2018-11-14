@@ -1,0 +1,13 @@
+<?xml version='1.1' encoding='UTF-8'?>
+<fingerprint>
+  <timestamp>2018-11-11 15:02:12.852 UTC</timestamp>
+  <md5sum>dfcd66bab8b3b1cdf8f2586fd4c1a84a</md5sum>
+  <fileName>Credential id=d1a87150-639a-4149-a336-aae8501de226 name=admin/******</fileName>
+  <usages>
+    <entry>
+      <string>Demo</string>
+      <ranges>1-31</ranges>
+    </entry>
+  </usages>
+  <facets/>
+</fingerprint>

@@ -4,47 +4,55 @@ services:
     build: ./dockerfiles/git
     ports:
      - "10022:22"
-    volumes:
-     - ./volumes/git:/git/
     
   jenkins_master:
     build: ./dockerfiles/jenkins 
     ports:
      - "8080:8080"
      - "50000:50000"
-    volumes:
-     - ./volumes/jenkins:/var/jenkins_home
 
   sonarqube:
     image: sonarqube:latest
     ports:
      - "9000:9000"
      - "9092:9092"
+
   nexus:
-    image: sonatype/nexus:latest
+    build: ./dockerfiles/nexus
     ports:
-     - "8081:8081"
-    volumes:
-     - ./volumes/nexus:/sonatype-work 
-  
-  selenium_hub:
-    image: selenium/hub:latest
-    ports:
-     - "4444:4444"
-     - "5555:5555"
-    environment:
-     - GRID_TIMEOUT=10000
-  selenium_node_firefox:
-    image: selenium/node-firefox:latest
-    environment:
-     - HUB_PORT_4444_TCP_ADDR=selenium_hub
-     - HUB_PORT_4444_TCP_PORT=4444
-  selenium_node_chrome:
-    image: selenium/node-chrome:latest
-    environment:
-     - HUB_PORT_4444_TCP_ADDR=selenium_hub
-     - HUB_PORT_4444_TCP_PORT=4444
+     - "8081:8081" 
    
+  zalenium:
+    build: ./dockerfiles/zalenium
+    container_name: zalenium
+    hostname: zalenium
+    tty: true
+    volumes:
+      - ./videos:/home/seluser/videos
+      - /var/run/docker.sock:/var/run/docker.sock
+            
+    ports:
+      - 4444:4444
+    command:
+      start --desiredContainers 2
+            --maxDockerSeleniumContainers 8
+            --screenWidth 800 --screenHeight 600
+            --timeZone "Europe/Berlin"
+            --videoRecordingEnabled true
+            --sauceLabsEnabled false
+            --browserStackEnabled false
+            --testingBotEnabled false
+            --startTunnel false
+    environment:
+      - HOST_UID
+      - HOST_GID
+      - SAUCE_USERNAME
+      - SAUCE_ACCESS_KEY
+      - BROWSER_STACK_USER
+      - BROWSER_STACK_KEY
+      - TESTINGBOT_KEY
+      - TESTINGBOT_SECRET
+  
   docker_controller: 
     build: ./dockerfiles/docker_controller
     ports:

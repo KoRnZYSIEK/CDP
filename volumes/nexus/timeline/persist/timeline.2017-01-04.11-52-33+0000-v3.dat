@@ -1,16 +1,0 @@
-а┘к╦╩Ц+SYSTEMCONFIG"$
-date2017-01-04 11:52:33.367+0000"
-actionCONFIG"O
-messageDNexus server configuration was changed: [Repository Target Registry]}гл╦╩Ц+SYSTEMBOOT"$
-date2017-01-04 11:52:33.443+0000"
-actionBOOT"0
-message%Started Nexus (version 2.14.2-01 OSS)гєос╩Ц+AUTHC_AUTHZAUTHC"$
-date2017-01-04 11:58:34.288+0000"
-actionAUTHC"O
-messageDSuccessfully authenticated user [admin] from IP address 192.168.56.1к▄╚т╩Ц+SYSTEMCONFIG"$
-date2017-01-04 11:58:54.043+0000"
-actionCONFIG"Y
-messageNNexus server configuration was changed: [Releases], change was made by [admin]ЬЫ╔т╩Ц+SYSTEMCONFIG"$
-date2017-01-04 11:58:54.107+0000"
-actionCONFIG"K
-message@Updated repository Releases (ID=releases)  as hosted repository.
