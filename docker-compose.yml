@@ -6,7 +6,7 @@ services:
      - "10022:22"
     
   jenkins_master:
-    build: ./dockerfiles/jenkins 
+    image: kornzysiek/jenkins
     ports:
      - "8080:8080"
      - "50000:50000"
@@ -18,7 +18,7 @@ services:
      - "9092:9092"
 
   nexus:
-    build: ./dockerfiles/nexus
+    image: sonatype/nexus:latest
     ports:
      - "8081:8081" 
    
