@@ -1,0 +1,13 @@
+<?xml version='1.1' encoding='UTF-8'?>
+<fingerprint>
+  <timestamp>2018-12-29 22:41:36.451 UTC</timestamp>
+  <md5sum>e10ad512c2ac7b2d0cbd73e237393f5f</md5sum>
+  <fileName>Credential id=settings.xml name=settings.xml</fileName>
+  <usages>
+    <entry>
+      <string>Bitbucket demo</string>
+      <ranges>9-13</ranges>
+    </entry>
+  </usages>
+  <facets/>
+</fingerprint>
